@@ -1,0 +1,208 @@
+html
+{
+    box-sizing: border-box;
+}
+*,*::before,*::after
+{
+    box-sizing: inherit;
+}
+body
+{
+    display: grid;
+    grid:150px 100px/1fr 900px 1fr;
+    margin:0;
+    font:14px/1.5 Arial;
+    font-weight: normal;
+}
+@media (max-width:678px)
+{
+    body{
+        display: grid;
+        grid:auto auto auto/auto;
+    }
+}
+main
+{
+    grid-area: 2/2/3/3;
+    display: grid;
+    grid: auto/300px 600px;
+}
+@media (max-width:678px)
+{
+    main{
+        grid-area: 2/1/3/2;
+        display: grid;
+        grid:auto/auto;
+        padding:10px;
+    }
+}
+header  
+{grid-area: 1/1/2/4;
+background-color:#444;
+text-align: center;
+}
+@media (max-width:678px)
+{
+header
+{
+    grid-area: 1/1/2/2;
+}
+}
+header > .shen
+{
+    width: 60px;
+    height: 60px;
+    border-radius:50%;
+    margin: 10px 0;
+    object-fit: cover;
+}
+header >h1 
+{
+    font-size:16px;
+    color:#ccc;
+    margin:0px;
+}
+header>p
+{
+    color:#999;
+    font-size: 12px;
+    margin:5px;
+}
+section
+{
+    display: grid;
+    grid:auto 1fr/60px 1fr;
+    margin-bottom:20px;
+    padding:0px;
+}
+section>.iconfont
+{
+    background-color:#77a8a3;
+    width: 30px;
+    height: 30px;
+    border-radius:50% ;
+    text-align: center;
+    line-height: 30px;
+    align-self: center;
+    justify-self: center;
+    color:white;
+}
+section>ul
+{
+    list-style: none;
+    grid-area: 2/1/3/3;
+    margin-top: -5px;
+   
+}
+section h2
+{
+    grid-area: 1/2/2/3;
+    font-size: 18px;
+    align-items: center;
+    display:flex;
+}
+section .detail
+{
+    list-style-type: disc;
+}
+section .detail>li
+{
+    margin-top:10px;
+}
+section h2::after
+{
+    content:'';
+    height:4px;
+    background: #77a8a3;
+    flex:1;
+    margin-left: 10px;
+}
+.basic-info>ul>li span
+{
+    margin-right: 10px;
+}
+.layout .detail>li
+{
+    display: grid;
+    grid: auto auto/auto 1fr auto;
+    grid-gap:10px;
+    align-items: center;
+}
+ 
+.layout .detail>li>.timeline
+{
+    grid-area: 1/1/2/2;
+}
+.layout .detail>li>h3
+{
+    grid-area: 1/2/2/3;
+}
+.layout .detail>li>.layside
+{
+    grid-area:1/3/2/4;
+}
+.layout .detail>li>p
+{
+    grid-area: 2/2/3/3;
+    margin-top: -15px;
+}
+
+main section .detail
+{
+    grid-area: 2/2/3/4;
+   padding-left: 0;
+  
+}
+
+.layout .content
+{
+    list-style-type: circle;
+    grid-area: 2/2/3/4;
+    padding:0px;
+    margin-top:-5px;
+}
+.map .skill
+{
+    grid-area: 2/2/3/3;
+    padding-left:0px;
+}
+.map>.skill dd
+{
+    background-color:#ccc;
+    height: 2px;
+    margin: 10px 0px;
+    padding:0px;
+}
+.map>.skill>dd>span
+{
+    display: block;
+    background-color: #77a8a3;
+    height: 2px;
+}
+@media (max-width:678px){
+.layout .detail>li
+{
+    display: grid;
+    grid: auto auto auto/ auto 1fr;
+}
+.layout .detail>li .timeline
+{
+    grid-area: 1/1/2/2;
+}
+.layout .detail>li .layside
+{
+    grid-area: 1/2/2/3;
+    justify-self: end;
+}
+.layout .detail>li h3{
+    grid-area: 2/1/3/3;
+    margin-top:0px;
+}
+.layout .detail>li p{
+    grid-area:3/1/4/3 ;
+}
+.layout .detail>li .content
+{
+    grid-area:3/1/4/3;
+    margin-top: -10px;
+}
